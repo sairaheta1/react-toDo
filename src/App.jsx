@@ -29,6 +29,12 @@ export default function App() {
     })
   }
 
+  function deleteTodo(id) {
+    setTodos(currentTodos => {
+      return currentTodos.filter(todo => todo.id != id)
+    })
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit} className="new-item-form">
@@ -47,7 +53,7 @@ export default function App() {
                 <input type="checkbox" checked={todo.completed} onChange={e => toggleTodo(todo.id, e.target.checked)}/>
                 {todo.title}
               </label>
-              <button className="btn btn-delete">Delete</button>
+              <button className="btn btn-delete" onClick={() => deleteTodo(todo.id)}>Delete</button>
             </li>
           )
         })}
