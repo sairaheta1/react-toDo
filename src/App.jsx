@@ -4,6 +4,7 @@ import "./styles.css"
 import { TodoList } from "./TodoList"
 
 export default function App() {
+  
 
   const [todos, setTodos] = useState(() => { //get list of items from local storage so it wont refresh
     const localValue = localStorage.getItem("ITEMS")
@@ -42,9 +43,12 @@ export default function App() {
 
   return (
     <>
+    <meta name="viewport" content="width=device-width" initial-scale="1.00" maximum-scale="1.0" />
     <NewTodoForm onSubmit={addTodo}/>
+    <div className="list">
       <h1 className="header">Todo List</h1>
-    <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+      <TodoList className="help" todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+    </div>
     </>
   
   )

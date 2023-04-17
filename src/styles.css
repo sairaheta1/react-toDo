@@ -1,0 +1,23 @@
+* {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.new-item-form {
+  background-color: rgb(192, 37, 37);
+}
+body {
+  background-color: #BCBD8B;
+}
+.btn {
+  background-color:#717744;
+}
+.header, .create-task {
+  color:#373D20;
+}
+.task-list {
+  color: #717744;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
