@@ -4,7 +4,6 @@ import "./styles.css"
 import { TodoList } from "./TodoList"
 
 export default function App() {
-  
 
   const [todos, setTodos] = useState(() => { //get list of items from local storage so it wont refresh
     const localValue = localStorage.getItem("ITEMS")

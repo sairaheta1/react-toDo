@@ -11,11 +11,11 @@ export function NewTodoForm({ onSubmit }) {
   }
   return (
   <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form">
           <label className="create-task" htmlFor="item" id="item">Add Task</label>
           <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item"/>
+          <button className="btn">Create</button>
         </div>
-        <button className="btn">Create</button>
       </form>
   )
 }
